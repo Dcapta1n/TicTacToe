@@ -7,7 +7,7 @@ package space.musicia.tictactoe;
 public class Board {
     int board[][] = new int[3][3];
     int moves;
-
+    //test
    void init(){
        for(int i=0;i<3;i++){
            for(int j=0;j<3;j++){
@@ -21,12 +21,12 @@ public class Board {
     }
     boolean setText(int x,int y,int player){
         board[x][y]=player;
-        boolean check = this.check(player);
+        boolean check1 = this.check(player);
         moves--;
-        if(check){
+        if(check1){
             this.endGame(player);
 
-            return check;
+            return check1;
         }else{
             return false;
         }
@@ -40,6 +40,7 @@ public class Board {
         }
     }
     boolean check(int player){
+
         for(int i=0;i<3;i++){
             int cnt=0;
             for(int j=0;j<3;j++){
